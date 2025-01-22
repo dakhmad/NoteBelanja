@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditorActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/back_button_editor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:titleTextColor="@color/black"
+        app:title="Editor" />
+
+    <!-- Image Upload Button -->
+    <ImageView
+        android:id="@+id/btnPilihGambar"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:contentDescription="Preview Gambar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/uploadgambar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_button_editor"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Input Title -->
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nama Transaksi"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@id/btnPilihGambar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="16dp" />
+
+    <!-- Input Date -->
+    <EditText
+        android:id="@+id/tanggal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal"
+        android:focusable="false"
+        android:inputType="date"
+        android:padding="12dp"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="16dp" />
+
+    <!-- Input Nominal -->
+    <EditText
+        android:id="@+id/nominal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nominal (Rp)"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@id/tanggal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="16dp" />
+
+    <!-- Dropdown Kategori -->
+    <Spinner
+        android:id="@+id/kategori_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@id/nominal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="16dp" />
+
+    <!-- Input Detail -->
+    <EditText
+        android:id="@+id/detail"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:hint="Keterangan"
+        android:gravity="top|start"
+        android:padding="12dp"
+        android:background="@drawable/custom_input"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/kategori_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="16dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSimpan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:text="Simpan"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
